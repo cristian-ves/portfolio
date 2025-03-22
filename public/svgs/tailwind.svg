@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 50 50"
+   width="50px"
+   height="50px"
+   version="1.1"
+   id="svg89"
+   sodipodi:docname="tailwind.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs93" />
+  <sodipodi:namedview
+     id="namedview91"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="8"
+     inkscape:cx="-5.0625"
+     inkscape:cy="14.5625"
+     inkscape:window-width="1850"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg89" />
+  <path
+     fill="#00acc1"
+     d="m 24.953614,10.752444 c -6.611849,0 -10.744256,3.304891 -12.397218,9.914674 2.479444,-3.304892 5.372128,-4.54358 8.678053,-3.718132 1.886443,0.471094 3.23464,1.839953 4.727472,3.35448 2.429854,2.466013 5.24299,5.321505 11.38891,5.321505 6.611849,0 10.744254,-3.304891 12.397217,-9.915707 -2.479444,3.304892 -5.372128,4.544613 -8.678052,3.719165 -1.88541,-0.471094 -3.233608,-1.839953 -4.726439,-3.35448 -2.430888,-2.467046 -5.245056,-5.321505 -11.389943,-5.321505 z M 12.556396,25.624971 c -6.6118486,0 -10.7442542,3.304892 -12.39721642,9.915708 2.47944342,-3.304892 5.37212732,-4.544613 8.67805182,-3.718132 1.8854096,0.472127 3.2336076,1.839953 4.7264386,3.353447 2.430889,2.467046 5.245057,5.322538 11.389944,5.322538 6.611849,0 10.744255,-3.304891 12.397217,-9.915707 -2.479444,3.304891 -5.372127,4.544613 -8.678052,3.718132 -1.886443,-0.471094 -3.23464,-1.839954 -4.727472,-3.353447 -2.429854,-2.467046 -5.24299,-5.322539 -11.388911,-5.322539 z"
+     id="path1458"
+     style="stroke-width:1.0331;fill:#ffffff" />
+</svg>
