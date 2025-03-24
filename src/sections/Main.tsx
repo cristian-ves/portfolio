@@ -12,11 +12,14 @@ const icons = [faEnvelope, faFileLines, faGithub, faLinkedin];
 
 export const Main = () => {
     return (
-        <main className="min-h-screen flex flex-col items-center justify-around pt-15">
+        <main
+            className="min-h-screen flex flex-col items-center justify-around pt-15"
+            id="Home"
+        >
             <div>
                 <div className="relative w-42 h-60 overflow-hidden">
                     <Image
-                        src="/profile.png"
+                        src="/profile.webp"
                         layout="fill"
                         objectFit="cover"
                         alt="Profile picture"

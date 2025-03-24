@@ -6,7 +6,10 @@ import { PortfolioApp } from "@/components/PortfolioApp";
 
 export const Portfolio = () => {
     return (
-        <section className="flex flex-col items-center w-80 my-5 gap-11">
+        <section
+            className="flex flex-col items-center w-80 my-5 gap-11"
+            id="Portfolio"
+        >
             <h2 className="text-2xl w-full font-bold">Portfolio</h2>
             {portfolioApps.map((app, i) => (
                 <PortfolioApp app={app} key={i} />
