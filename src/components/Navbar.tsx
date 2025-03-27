@@ -2,7 +2,7 @@
 import {
     faAddressCard,
     faCubes,
-    faFolder,
+    faFolderOpen,
     faHome,
     faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -12,9 +12,9 @@ import { NavbarItem } from "./NavbarItem";
 
 const icons = [
     { icon: faHome, text: "Home" },
-    { icon: faFolder, text: "Portfolio" },
+    { icon: faFolderOpen, text: "Portfolio" },
     { icon: faCubes, text: "Skills" },
-    { icon: faUser, text: "About Me" },
+    { icon: faUser, text: "About me" },
     { icon: faAddressCard, text: "Contact" },
 ];
 

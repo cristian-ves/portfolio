@@ -30,7 +30,7 @@ export const Main = () => {
                 </div>
                 <div className="flex flex-col items-center justify-center m-1">
                     <h2>
-                        <strong>Hello, I'm Chris</strong>
+                        <strong>Hello, I'm Cristian</strong>
                     </h2>
                     <h1>Software developer</h1>
                     <div className="bg-cyan-700 px-2 py-0.5 rounded-3xl mt-1">

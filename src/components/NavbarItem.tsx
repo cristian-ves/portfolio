@@ -1,7 +1,8 @@
+import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface NavbarItemProps {
-    icon: any;
+    icon: IconDefinition;
     text: string;
     isActive: boolean;
     onClick: () => void;
