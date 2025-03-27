@@ -6,22 +6,27 @@ import React from "react";
 interface BadgeProps {
     icon: IconDefinition | string;
     text: string;
+    big?: boolean;
 }
 
-export const Badge = ({ icon, text }: BadgeProps) => {
+export const Badge = ({ icon, text, big = false }: BadgeProps) => {
+    const size = big ? 20 : 16;
     return (
         <div className="bg-cyan-700 rounded-3xl px-2 py-0.5 flex gap-1 items-center justify-center">
             {typeof icon == "string" ? (
                 <Image
                     src={`/svgs/${icon}.svg`}
-                    width={16}
-                    height={16}
+                    width={size}
+                    height={size}
                     alt={text}
                 />
             ) : (
-                <FontAwesomeIcon icon={icon} className="fa-fw" />
+                <FontAwesomeIcon
+                    icon={icon}
+                    className={`fa-fw ${big && "text-xl"}`}
+                />
             )}
-            <p className="text-sm">{text}</p>
+            <p className={big ? "" : "text-sm"}>{text}</p>
         </div>
     );
 };

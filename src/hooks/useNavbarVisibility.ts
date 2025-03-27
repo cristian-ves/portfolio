@@ -8,7 +8,7 @@ export const useNavbarVisibility = () => {
             const mainSection = document.getElementById("Home");
             if (mainSection) {
                 const mainBottom = mainSection.getBoundingClientRect().bottom;
-                setIsVisible(mainBottom + 500 < window.innerHeight);
+                setIsVisible(mainBottom + 300 < window.innerHeight);
             }
         };
 

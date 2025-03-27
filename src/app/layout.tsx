@@ -5,7 +5,6 @@ import "animate.css";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Image from "next/image";
 config.autoAddCss = false;
 
 const exo_2 = Exo_2({
@@ -25,7 +24,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className={exo_2.variable}>
             <body
                 className={`relative flex flex-col items-center`}
                 style={{
@@ -40,6 +39,7 @@ export default function RootLayout({
                 <div className="relative min-h-screen w-full flex flex-col text-white items-center">
                     {children}
                 </div>
+                <div className="mt-50"></div>
             </body>
         </html>
     );

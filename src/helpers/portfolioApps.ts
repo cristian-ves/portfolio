@@ -1,6 +1,6 @@
 import { IconDefinition, faNodeJs, faReact } from "@fortawesome/free-brands-svg-icons";
 
-interface Badge {
+export interface BadgeInterface {
     icon: IconDefinition | string;
     text: string;
 }
@@ -9,7 +9,7 @@ export interface PortfolioAppInterface{
     title: string;
     src: string;
     desc: string;
-    badges: Badge[];
+    badges: BadgeInterface[];
     github: string;
     deploy:string;
 }
