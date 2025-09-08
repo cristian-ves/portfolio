@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     title: "Cristian's Portfolio",
     description:
         "I build modern, responsive web apps using React.js, Next.js, and Java. With a strong focus on UI/UX and performance, I craft seamless user experiences. I also work with Node.js and Golang to develop scalable full-stack solutions.",
+    viewport: {
+        width: "device-width",
+        initialScale: 1,
+    }
 };
 
 export default function RootLayout({

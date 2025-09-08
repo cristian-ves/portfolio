@@ -29,7 +29,7 @@ export const AboutMe = () => {
                 <strong>2.5 years</strong> at <strong>TELUS Digital</strong>,
                 growing into a{" "}
                 <strong>Senior Customer Service Representative</strong>, which
-                strengthened my communication and adaptability.
+                strengthened my communication, adaptability and undesrstanding on customer experience.
             </p>
 
             <p>
