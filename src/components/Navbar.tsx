@@ -29,7 +29,7 @@ export const Navbar = () => {
     return (
         <div
             className={`fixed bottom-12 w-80 py-1 px-3 bg-white/30 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border border-gray-400 
-            flex items-center justify-between text-black/70 transition-all duration-500
+            flex items-center justify-between text-black/70 transition-all duration-500 md:w-2/3 md:justify-around z-10
             ${
                 isVisible
                     ? "animate__animated animate__fadeIn visible"
