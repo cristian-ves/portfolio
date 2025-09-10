@@ -9,9 +9,9 @@ export const SkillsStack = ({
     title: string;
 }) => {
     return (
-        <div>
-            <h3 className="text-center font-bold text-xl">{title}</h3>
-            <div className="flex flex-wrap gap-3 items-center justify-center mt-5 mb-3">
+        <div className="md:w-full">
+            <h3 className="text-center font-bold text-xl md:text-left">{title}</h3>
+            <div className="flex flex-wrap gap-3 items-center justify-center mt-5 mb-3 md:justify-start md:gap-5">
                 {icons.map(({ icon, text }, i) => (
                     <Badge icon={icon} text={text} big key={i} />
                 ))}
