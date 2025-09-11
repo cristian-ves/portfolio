@@ -40,7 +40,7 @@ export default function RootLayout({
             >
                 <div className="fixed inset-0 bg-black/60 -z-10"></div>
 
-                <div className="relative min-h-screen w-full flex flex-col text-white items-center">
+                <div className="relative min-h-screen flex flex-col text-white items-center overflow-x-clip gap-5">
                     {children}
                 </div>
                 <div className="mt-50"></div>

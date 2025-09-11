@@ -41,11 +41,11 @@ const buttons: ContactButtonProps[] = [
 export const Contact = () => {
     return (
         <section
-            className="flex flex-col items-center w-80 my-5 gap-6"
+            className="flex flex-col items-center w-80 my-5 gap-6 md:w-5/6"
             id="Contact"
         >
             <h2 className="text-2xl w-full font-bold mb-4">Contact</h2>
-            <div className="flex flex-col items-center w-75 gap-7">
+            <div className="flex flex-col items-center w-75 gap-7 md:w-full md:flex-wrap md:flex-row md:justify-center">
                 {buttons.map(({ icon, onClick, text }, i) => (
                     <ContactButton
                         icon={icon}

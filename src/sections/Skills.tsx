@@ -41,9 +41,9 @@ export const Skills = () => {
                 objectFit="cover"
                 alt="Saturn"
                 quality={90}
-                width={526}
-                height={229}
-                className="rounded-lg absolute bottom-0 -right-80 -z-10"
+                width={450}
+                height={196}
+                className="rounded-lg absolute bottom-0 -right-65 -z-10 hidden md:block"
             />
                 
         </section>
