@@ -10,7 +10,8 @@ export const Portfolio = () => {
             className="flex flex-col items-center w-80 my-5 gap-11 relative md:w-5/6"
             id="Portfolio"
         >
-            <h2 className="text-2xl w-full font-bold">Portfolio</h2>
+            <h2 className="text-2xl w-full font-bold lg:text-center">Portfolio</h2>
+            {/* TODO: Add additional column for large sizes */}
             {portfolioApps.map((app, i) => (
                 <PortfolioApp app={app} key={i} />
             ))}

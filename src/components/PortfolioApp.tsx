@@ -7,10 +7,10 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { PortfolioAppInterface } from "@/helpers";
 import { Badge } from "./Badge";
 
-export const PortfolioApp = ({ app }: { app: PortfolioAppInterface }) => {
+export const    PortfolioApp = ({ app }: { app: PortfolioAppInterface }) => {
     const { title, src, badges, desc, deploy, github } = app;
     return (
-        <div className="flex flex-col items-center w-9/10 gap-3 md:grid md:grid-cols-2 md:auto-rows-min md:w-4/5">
+        <div className="flex flex-col items-center w-9/10 gap-3 md:grid md:grid-cols-2 md:auto-rows-min md:w-4/5 lg:max-w-170">
             <h3 className="font-bold text-lg">{title}</h3>
             <Image
                 className="md:row-span-4 md:col-start-2 self-center place-self-center"

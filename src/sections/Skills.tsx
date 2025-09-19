@@ -5,11 +5,11 @@ import Image from "next/image";
 export const Skills = () => {
     return (
         <section
-            className="flex flex-col items-center w-80 my-5 gap-8 md:w-5/6 md:relative"
+            className="flex flex-col items-center w-80 my-5 gap-8 md:w-5/6 md:relative lg:min-w-280"
             id="Skills"
             >
 
-            <h2 className="text-2xl w-full font-bold">Skills</h2>
+            <h2 className="text-2xl w-full font-bold lg:text-center">Skills</h2>
 
             <div className="flex flex-col gap-6 w-full">
                 <SkillsStack icons={frontendIcons} title="Frontend" />
@@ -17,7 +17,7 @@ export const Skills = () => {
                 <SkillsStack icons={toolsIcons} title="Tools" />
             </div>
 
-            <h2 className="text-2xl w-full font-bold">Soft skills</h2>
+            <h2 className="text-2xl w-full font-bold lg:text-center">Soft skills</h2>
 
             <div className="flex flex-col gap-6 w-full">
 
@@ -43,7 +43,7 @@ export const Skills = () => {
                 quality={90}
                 width={450}
                 height={196}
-                className="rounded-lg absolute bottom-0 -right-65 -z-10 hidden md:block"
+                className="rounded-lg absolute bottom-0 -right-65 -z-10 hidden md:block lg:-right-0"
             />
                 
         </section>
