@@ -1,3 +1,5 @@
+'use client'
+
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
     faAngleDown,
@@ -11,9 +13,14 @@ import Image from "next/image";
 const icons = [faEnvelope, faFileLines, faGithub, faLinkedin];
 
 export const Main = () => {
+
+    const scrollDown = () => {
+        document.getElementById('Portfolio')?.scrollIntoView({ behavior: "smooth" });
+    }
+
     return (
         <main
-            className="min-h-screen flex flex-col items-center justify-around pt-15 lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:w-7/8 "
+            className="min-h-screen flex flex-col items-center justify-around pt-15 lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:w-full"
             id="Home"
         >
             <div className="flex flex-col items-center">
@@ -56,7 +63,7 @@ export const Main = () => {
                     ))}
                 </div>
             </div>
-            <div className="flex flex-col items-center cursor-pointer lg:col-span-2">
+            <div className="flex flex-col items-center cursor-pointer lg:col-span-2" onClick={scrollDown}>
                 <p className="text-xs text-white/70">scroll down</p>
                 <FontAwesomeIcon
                     icon={faAngleDown}

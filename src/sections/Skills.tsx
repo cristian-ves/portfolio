@@ -5,7 +5,7 @@ import Image from "next/image";
 export const Skills = () => {
     return (
         <section
-            className="flex flex-col items-center w-80 my-5 gap-8 md:w-5/6 md:relative lg:min-w-280"
+            className="flex flex-col items-center w-80 my-5 gap-8 md:w-5/6 md:relative lg:min-w-230"
             id="Skills"
             >
 

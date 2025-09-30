@@ -1,7 +1,7 @@
 export const AboutMe = () => {
     return (
         <article
-            className="flex flex-col items-center w-80 my-8 gap-6 md:grid md:grid-cols-2 md:auto-rows-min md:w-5/6 md:items-start lg:max-w-200"
+            className="flex flex-col items-center w-80 my-8 gap-6 md:grid md:grid-cols-2 md:auto-rows-min md:w-5/6 md:items-start "
             id="About me"
         >
             <h2 className="text-2xl w-full font-bold mb-5 md:col-span-2 lg:text-center">About me</h2>
