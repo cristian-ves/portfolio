@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 const socialIcons = [
-    { icon: faEnvelope, href: "mailto:alejandrovasquezesc@gmail.com" },
-    { icon: faFileLines, href: "/cv.pdf" }, // replace with your actual CV path
-    { icon: faGithub, href: "https://github.com/cristian-ves" },
-    { icon: faLinkedin, href: "https://linkedin.com/in/your-handle" }, // replace
+    { icon: faEnvelope, href: "mailto:alejandrovasquezesc@gmail.com", text: 'email' },
+    { icon: faFileLines, href: "/cristian-vasquez-cv.pdf", download: true, text: 'cv' },
+    { icon: faGithub, href: "https://github.com/cristian-ves", text: 'github' },
+    { icon: faLinkedin, href: "https://linkedin.com/in/cristian-vasquez-web-developer", text: 'linkedin' },
 ];
 
 export const Main = () => {
@@ -55,21 +55,30 @@ export const Main = () => {
 
             {/* Email + social links */}
             <div className="flex flex-col md:flex-row gap-4 lg:flex-col lg:col-start-1 lg:place-self-center">
-                <div className="glass-btn flex items-center gap-1 px-3 py-2 text-sm text-white/90 w-full">
+                <div
+                    className="glass-btn flex items-center gap-1 px-3 py-2 text-sm text-white/90 w-full"
+                    onClick={() => navigator.clipboard.writeText("alejandrovasquezesc@gmail.com")}>
                     <span className="flex-1 truncate">alejandrovasquezesc@gmail.com</span>
                     <FontAwesomeIcon
                         icon={faCopy}
                         className="fa-fw text-lg cursor-pointer shrink-0"
-                        onClick={() => navigator.clipboard.writeText("alejandrovasquezesc@gmail.com")}
                     />
                 </div>
                 <div className="flex items-center justify-around lg:gap-6">
-                    {socialIcons.map(({ icon, href }, i) => (
-                        <a key={i} href={href} target="_blank" rel="noopener noreferrer">
+                    {socialIcons.map(({ icon, href, text, download }, i) => (
+                        <a
+                            key={i}
+                            href={href}
+                            download={download || undefined}
+                            target={download ? undefined : "_blank"}
+                            rel="noopener noreferrer"
+                            className="flex flex-col items-center"
+                        >
                             <FontAwesomeIcon
                                 icon={icon}
                                 className="fa-fw text-3xl text-white/60 hover:text-white transition-colors duration-200 cursor-pointer"
                             />
+                            <span className="text-[11px]">{text}</span>
                         </a>
                     ))}
                 </div>
@@ -82,6 +91,6 @@ export const Main = () => {
                 <p className="text-xs">scroll down</p>
                 <FontAwesomeIcon icon={faAngleDown} className="fa-fw text-2xl" />
             </div>
-        </main>
+        </main >
     );
 };
