@@ -23,11 +23,12 @@ export const frontendIcons = [
 ];
 
 export const backendIcons = [
-    { icon: "go", text: "Go" },
-    { icon: faNodeJs, text: "Node js" },
     { icon: "java", text: "Java" },
-    { icon: "mysql", text: "MySql" },
+    { icon: "springboot", text: "Spring Boot" },
+    { icon: faNodeJs, text: "Node.js" },
+    { icon: "socketdotio", text: "WebSockets" },
     { icon: faDatabase, text: "SQL" },
+    { icon: "mysql", text: "MySql" },
     { icon: "postman", text: "Postman" },
 ];
 
