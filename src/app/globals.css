@@ -1,20 +1,182 @@
 @import "tailwindcss";
 
-
 :root {
-  --background: #0D0D0D;
-  --foreground: rgba(23, 23, 23);
-  --font-exo-2: "Exo 2", sans-serif;
+    --background: #0d0d0d;
+    --foreground: #ffffff;
+    --font-exo-2: "Exo 2", sans-serif;
+
+    /* Glass system */
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-hover: rgba(255, 255, 255, 0.13);
+    --glass-strong: rgba(255, 255, 255, 0.18);
+
+    /* Accent */
+    --accent: #0e7490;
+    --accent-light: #06b6d4;
+
+    /* Section spacing */
+    --section-gap: 5rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-exo-2);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-exo-2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-exo-2);
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-exo-2);
+}
+
+/* Nebula atmospheric glow — sits above background, below content */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(
+            ellipse 80% 40% at 50% 0%,
+            rgba(6, 182, 212, 0.07) 0%,
+            transparent 70%
+        ),
+        radial-gradient(
+            ellipse 50% 30% at 80% 100%,
+            rgba(6, 182, 212, 0.04) 0%,
+            transparent 60%
+        );
+}
+
+/* Consistent section title style */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 0 20px rgba(6, 182, 212, 0.4),
+        0 0 40px rgba(6, 182, 212, 0.15);
+}
+
+/* Glass card utility */
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.glass-card:hover {
+    background: var(--glass-hover);
+}
+
+/* Interactive element base */
+.glass-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(4px);
+    border-radius: 0.25rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.glass-btn:hover {
+    background: var(--glass-hover);
+    border-color: var(--accent-light);
+}
+
+/* Section divider */
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(6, 182, 212, 0.06) 20%,
+        rgba(6, 182, 212, 0.25) 50%,
+        rgba(6, 182, 212, 0.06) 80%,
+        transparent 100%
+    );
+    position: relative;
+}
+
+.section-divider::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 3px;
+    background: #22d3ee;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px rgba(34, 211, 238, 0.3);
+}
+
+@keyframes shooting-star {
+    0% {
+        transform: translateX(0) translateY(0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(300px) translateY(300px) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+.shooting-star {
+    position: fixed;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 100%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    animation: shooting-star 1.2s ease-in forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .shooting-star {
+        display: none;
+    }
+}
+
+[id] {
+    scroll-margin-top: 28px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }

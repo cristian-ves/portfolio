@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import "./globals.css";
 import "animate.css";
-
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { ShootingStars } from "@/components/ShootingStars";
 config.autoAddCss = false;
 
 const exo_2 = Exo_2({
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     viewport: {
         width: "device-width",
         initialScale: 1,
-    }
+    },
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={exo_2.variable}>
             <body
-                className={`relative flex flex-col items-center`}
+                className="relative flex flex-col items-center"
                 style={{
                     backgroundImage: "url('/background.jpg')",
                     backgroundSize: "cover",
@@ -38,12 +38,27 @@ export default function RootLayout({
                     backgroundAttachment: "fixed",
                 }}
             >
-                <div className="fixed inset-0 bg-black/60 -z-10"></div>
+                {/* Dark overlay */}
+                <div className="fixed inset-0 bg-black/80 -z-10" />
 
-                <div className="relative min-h-screen flex flex-col text-white items-center overflow-x-clip gap-5 lg:gap-25">
+                {/* Nebula glow — above overlay, below content */}
+                <div
+                    className="fixed inset-0 pointer-events-none z-0"
+                    style={{
+                        background: `
+                          radial-gradient(ellipse 100% 35% at 50% 0%, rgba(6, 182, 212, 0.03) 0%, transparent 100%),
+                          radial-gradient(ellipse 60% 25% at 15% 50%, rgba(6, 182, 212, 0.015) 0%, transparent 100%)
+                        `
+                    }}
+                />
+
+                {/* Main content container */}
+                <div className="relative w-full max-w-5xl mx-auto flex flex-col text-white items-center overflow-x-clip gap-16 px-4 md:px-8 pb-32">
                     {children}
                 </div>
-                <div className="mt-50"></div>
+
+                <ShootingStars />
+
             </body>
         </html>
     );

@@ -3,16 +3,22 @@ import { Portfolio, Main } from "../sections";
 import { Skills } from "@/sections/Skills";
 import { AboutMe } from "@/sections/AboutMe";
 import { Contact } from "@/sections/Contact";
+import { SectionDivider } from "@/components/SectionDivider";
+import { RevealWrapper } from "@/components/RevealWrapper";
 
 export default function Home() {
     return (
         <>
             <Main />
             <Navbar />
-            <Portfolio />
-            <Skills />
-            <AboutMe />
-            <Contact />
+            <SectionDivider />
+            <RevealWrapper><Portfolio /></RevealWrapper>
+            <SectionDivider />
+            <RevealWrapper><Skills /></RevealWrapper>
+            <SectionDivider />
+            <RevealWrapper><AboutMe /></RevealWrapper>
+            <SectionDivider />
+            <RevealWrapper><Contact /></RevealWrapper>
         </>
     );
 }

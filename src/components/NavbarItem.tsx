@@ -20,14 +20,12 @@ export const NavbarItem = ({
     >
         <FontAwesomeIcon
             icon={icon}
-            className={`fa-fw text-2xl transition-all duration-300 ${
-                isActive ? "text-black " : "text-black/70"
-            }`}
+            className={`fa-fw text-2xl transition-all duration-300 ${isActive ? "text-black " : "text-black/70"
+                }`}
         />
         <p
-            className={`text-xs transition-all duration-300 ${
-                isActive ? "text-black" : "text-black/70"
-            }`}
+            className={`text-[11px] md:text-xs transition-all duration-300 ${isActive ? "text-black" : "text-black/70"
+                }`}
         >
             {text}
         </p>

@@ -1,24 +1,28 @@
-import { IconDefinition, faNodeJs, faReact } from "@fortawesome/free-brands-svg-icons";
+import {
+    IconDefinition,
+    faNodeJs,
+    faReact,
+} from "@fortawesome/free-brands-svg-icons";
 
 export interface BadgeInterface {
     icon: IconDefinition | string;
     text: string;
 }
 
-export interface PortfolioAppInterface{
+export interface PortfolioAppInterface {
     title: string;
     src: string;
     desc: string;
     badges: BadgeInterface[];
     github: string;
-    deploy:string;
+    deploy: string;
 }
 
 export const portfolioApps: PortfolioAppInterface[] = [
     {
         title: "Packages app",
         src: "packages",
-        desc: "A web system for tracking pachages, managing storage, automating logistics and calculating costs, with role-based access for administrators, operators and receptionists",
+        desc: "A web system for tracking packages, managing storage, automating logistics and calculating costs, with role-based access for administrators, operators and receptionists",
         badges: [
             {
                 icon: faReact,
@@ -47,19 +51,19 @@ export const portfolioApps: PortfolioAppInterface[] = [
         badges: [
             {
                 icon: "next",
-                text: "Next"
+                text: "Next",
             },
             {
                 icon: faNodeJs,
-                text: "Node"
+                text: "Node",
             },
             {
                 icon: "sass",
-                text: "SASS"
-            }
+                text: "SASS",
+            },
         ],
         github: "https://github.com/cristian-ves/manuel-freire",
-        deploy: "https://google.com" //TODO: add the link
+        deploy: "https://google.com", //TODO: add the link
     },
     {
         title: "Typescript compiler",
@@ -68,14 +72,14 @@ export const portfolioApps: PortfolioAppInterface[] = [
         badges: [
             {
                 icon: "java",
-                text: "Java"
+                text: "Java",
             },
             {
                 icon: "typescript",
-                text: "Typescript"
-            }
+                text: "Typescript",
+            },
         ],
         github: "https://github.com/cristian-ves/typescript-clone",
-        deploy: ""
-    }
-]
+        deploy: "",
+    },
+];

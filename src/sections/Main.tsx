@@ -1,78 +1,86 @@
-'use client'
-
+"use client";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import {
-    faAngleDown,
-    faCopy,
-    faEnvelope,
-    faFileLines,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faCopy, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
-const icons = [faEnvelope, faFileLines, faGithub, faLinkedin];
+const socialIcons = [
+    { icon: faEnvelope, href: "mailto:alejandrovasquezesc@gmail.com" },
+    { icon: faFileLines, href: "/cv.pdf" }, // replace with your actual CV path
+    { icon: faGithub, href: "https://github.com/cristian-ves" },
+    { icon: faLinkedin, href: "https://linkedin.com/in/your-handle" }, // replace
+];
 
 export const Main = () => {
-
     const scrollDown = () => {
-        document.getElementById('Portfolio')?.scrollIntoView({ behavior: "smooth" });
-    }
+        document.getElementById("Portfolio")?.scrollIntoView({ behavior: "smooth" });
+    };
 
     return (
         <main
-            className="min-h-screen flex flex-col items-center justify-around pt-15 lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:w-full"
+            className="min-h-screen w-full flex flex-col items-center justify-around pt-16
+        lg:grid lg:grid-cols-2 lg:grid-rows-[auto_auto_auto] lg:items-center"
             id="Home"
         >
-            <div className="flex flex-col items-center">
-                <div className="relative w-42 h-60 overflow-hidden lg:w-64 lg:h-92">
+            {/* Profile card */}
+            <div className="flex flex-col items-center gap-3">
+                <div className="relative w-40 h-56 lg:w-65 lg:h-90 overflow-hidden rounded-lg">
                     <Image
                         src="/profile.webp"
-                        layout="fill"
-                        objectFit="cover"
-                        alt="Profile picture"
+                        fill
+                        className="object-cover rounded-lg"
+                        alt="Cristian's profile picture"
                         quality={90}
-                        className="rounded-lg"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/35 opacity-70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25" />
                 </div>
-                <div className="flex flex-col items-center justify-center m-1">
-                    <h2>
-                        <strong>Hello, I'm Cristian</strong>
-                    </h2>
-                    <h1>Software developer</h1>
-                    <div className="bg-cyan-700 px-2 py-0.5 rounded-3xl mt-1">
+                <div className="flex flex-col items-center gap-1">
+                    <h2 className="font-bold text-lg">Hello, I'm Cristian</h2>
+                    <h1 className="text-white/70">Software Developer</h1>
+                    <div className="bg-cyan-700 px-3 py-0.5 rounded-full mt-1">
                         <p className="text-xs">Available for work</p>
                     </div>
                 </div>
             </div>
+
+            {/* Bio — only lg+ */}
+            <div className="hidden lg:flex flex-col gap-3 max-w-sm lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:place-self-center">
+                <h2 className="font-bold text-2xl leading-snug">Frontend & Full-Stack Developer</h2>
+                <p className="text-white/75 leading-relaxed">
+                    I build modern, responsive web apps using React.js, Next.js, and Java. With a strong
+                    focus on UI/UX and performance, I craft seamless user experiences. I also work with
+                    Node.js and Golang to develop scalable full-stack solutions.
+                </p>
+            </div>
+
+            {/* Email + social links */}
             <div className="flex flex-col md:flex-row gap-4 lg:flex-col lg:col-start-1 lg:place-self-center">
-                <div className="h-full w-full bg-white/40 rounded-sm bg-clip-padding border border-gray-400 flex items-center pl-1.5 gap-0.5 text-xs text-black lg:px-8">
-                    <p>alejandrovasquezesc@gmail.com</p>
+                <div className="glass-btn flex items-center gap-1 px-3 py-2 text-sm text-white/90 w-full">
+                    <span className="flex-1 truncate">alejandrovasquezesc@gmail.com</span>
                     <FontAwesomeIcon
                         icon={faCopy}
-                        className="fa-fw text-xl cursor-pointer p-1.5"
+                        className="fa-fw text-lg cursor-pointer shrink-0"
+                        onClick={() => navigator.clipboard.writeText("alejandrovasquezesc@gmail.com")}
                     />
                 </div>
-                <div className="flex items-center justify-between lg:justify-evenly">
-                    {icons.map((icon, i) => (
-                        <FontAwesomeIcon
-                            icon={icon}
-                            className="fa-fw text-4xl text-white/70 cursor-pointer"
-                            key={i}
-                        />
+                <div className="flex items-center justify-around lg:gap-6">
+                    {socialIcons.map(({ icon, href }, i) => (
+                        <a key={i} href={href} target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon
+                                icon={icon}
+                                className="fa-fw text-3xl text-white/60 hover:text-white transition-colors duration-200 cursor-pointer"
+                            />
+                        </a>
                     ))}
                 </div>
             </div>
-            <div className="flex flex-col items-center cursor-pointer lg:col-span-2" onClick={scrollDown}>
-                <p className="text-xs text-white/70">scroll down</p>
-                <FontAwesomeIcon
-                    icon={faAngleDown}
-                    className="fa-fw text-2xl md:text-4xl text-white/70"
-                />
-            </div>
-            <div className="hidden lg:flex lg:flex-col lg:gap-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:place-self-center lg:max-w-96">
-                <h2><strong>Frontend & Full-Stack Developer</strong></h2>
-                <p>I build modern, responsive web apps using React.js, Next.js, and Java. With a strong focus on UI/UX and performance, I craft seamless user experiences. I also work with Node.js and Golang to develop scalable full-stack solutions.</p>
+
+            <div
+                className="flex flex-col items-center cursor-pointer text-white/50 hover:text-white/80 transition-colors lg:col-span-2"
+                onClick={scrollDown}
+            >
+                <p className="text-xs">scroll down</p>
+                <FontAwesomeIcon icon={faAngleDown} className="fa-fw text-2xl" />
             </div>
         </main>
     );

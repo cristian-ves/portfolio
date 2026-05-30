@@ -9,12 +9,12 @@ export interface ContactButtonProps {
 
 export const ContactButton = ({ onClick, icon, text }: ContactButtonProps) => {
     return (
-        <div
-            className="flex items-center justify-center bg-white/50 rounded-xs bg-clip-padding border border-gray-400 py-2 px-2 gap-2 cursor-pointer w-full font-medium md:w-72"
+        <button
+            className="glass-btn flex items-center justify-center gap-2 py-2.5 px-4 w-full font-medium text-white"
             onClick={onClick}
         >
-            <FontAwesomeIcon icon={icon} className="fa-fw text-2xl" />
-            <p>{text}</p>
-        </div>
+            <FontAwesomeIcon icon={icon} className="fa-fw text-xl" />
+            <span>{text}</span>
+        </button>
     );
 };

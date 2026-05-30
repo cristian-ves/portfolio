@@ -1,51 +1,33 @@
+"use client"
 import { backendIcons, frontendIcons, toolsIcons } from "@/helpers";
 import { SkillsStack } from "../components/SkillsStack";
-import Image from "next/image";
+import { Container } from "@/components/Container";
+import { useReveal } from "@/hooks/useReveal";
 
 export const Skills = () => {
+    const ref = useReveal();
     return (
-        <section
-            className="flex flex-col items-center w-80 my-5 gap-8 md:w-5/6 md:relative lg:min-w-230"
-            id="Skills"
-            >
-
-            <h2 className="text-2xl w-full font-bold lg:text-center">Skills</h2>
-
-            <div className="flex flex-col gap-6 w-full">
+        <Container id="Skills" ref={ref}>
+            <h2 className="section-title">Skills</h2>
+            <div className="flex flex-col gap-8 w-full">
                 <SkillsStack icons={frontendIcons} title="Frontend" />
                 <SkillsStack icons={backendIcons} title="Backend" />
                 <SkillsStack icons={toolsIcons} title="Tools" />
             </div>
 
-            <h2 className="text-2xl w-full font-bold lg:text-center">Soft skills</h2>
-
-            <div className="flex flex-col gap-6 w-full">
-
-                <p>
-                    <strong>Problem-solving:</strong> Tackles challenges with
-                    critical thinking and efficient solutions.
-                </p>
-                <p>
-                    <strong>Communication:</strong> Conveys ideas clearly and
-                    collaborates effectively.
-                </p>
-                <p>
-                    <strong>Adaptability:</strong> Quickly adjusts to changing
-                    environments and technologies.
-                </p>
-
+            <h2 className="section-title mt-4">Soft Skills</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                    { label: "Problem-solving", desc: "Tackles challenges with critical thinking and efficient solutions." },
+                    { label: "Communication", desc: "Conveys ideas clearly and collaborates effectively." },
+                    { label: "Adaptability", desc: "Quickly adjusts to changing environments and technologies." },
+                ].map(({ label, desc }) => (
+                    <div key={label} className="glass-card p-4 flex flex-col gap-1">
+                        <p className="font-semibold text-sm text-cyan-400">{label}</p>
+                        <p className="text-white/75 text-sm">{desc}</p>
+                    </div>
+                ))}
             </div>
-
-            <Image
-                src="/skills/saturn.webp"
-                objectFit="cover"
-                alt="Saturn"
-                quality={90}
-                width={450}
-                height={196}
-                className="rounded-lg absolute bottom-0 -right-65 -z-10 hidden md:block lg:-right-0"
-            />
-                
-        </section>
+        </Container>
     );
 };

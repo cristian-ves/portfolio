@@ -1,11 +1,5 @@
 "use client";
-import {
-    faAddressCard,
-    faCubes,
-    faFolderOpen,
-    faHome,
-    faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard, faCubes, faFolderOpen, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useNavbarVisibility } from "@/hooks/useNavbarVisibility";
 import { NavbarItem } from "./NavbarItem";
@@ -27,14 +21,9 @@ export const Navbar = () => {
     };
 
     return (
-        <div
-            className={`fixed bottom-12 w-80 py-1 px-3 bg-white/30 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 border border-gray-400 
-            flex items-center justify-between text-black/70 transition-all duration-500 md:w-2/3 md:justify-around z-10 lg:max-w-150
-            ${
-                isVisible
-                    ? "animate__animated animate__fadeIn visible"
-                    : "animate__animated animate__fadeOut invisible"
-            }`}
+        <nav
+            className={`fixed bottom-10 py-1.5 px-4 bg-white/25 rounded-lg bg-clip-padding  backdrop-filter backdrop-blur-md border border-white/20 flex items-center justify-between gap-6  text-white transition-all duration-500 z-10 w-80 md:w-auto md:px-10
+        ${isVisible ? "animate__animated animate__fadeIn visible" : "animate__animated animate__fadeOut invisible"}`}
         >
             {icons.map(({ icon, text }, i) => (
                 <NavbarItem
@@ -45,6 +34,6 @@ export const Navbar = () => {
                     onClick={() => handleScrollToSection(text)}
                 />
             ))}
-        </div>
+        </nav>
     );
 };
