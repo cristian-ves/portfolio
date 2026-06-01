@@ -25,7 +25,7 @@ export const AboutMe = () => {
                 </p>
                 <p>
                     Professionally, I spent <strong className="text-cyan-400 font-semibold">2.5 years at{" "}
-                    </strong><a href="https://www.telusdigital.com" target="_blank" className="text-cyan-400 font-semibold hover:text-cyan-300 transition-colors">
+                    </strong><a href="https://www.telusdigital.com" target="_blank" className="text-purple-400 font-semibold hover:text-purple-300 transition-colors">
                         TELUS Digital
                     </a> as a <strong className="text-cyan-400 font-semibold">Senior Customer Service Specialist</strong>, supporting
                     international clients and developing practical understanding of{" "}

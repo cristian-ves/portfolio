@@ -37,6 +37,9 @@ export const Main = () => {
                 <div className="flex flex-col items-center gap-1">
                     <h2 className="font-bold text-lg">Hello, I'm Cristian</h2>
                     <h1 className="text-white/70">Software Developer</h1>
+                    <p className="text-sm text-cyan-100/50 text-center max-w-48 mb-1">
+                        React · Next.js · Java · Spring Boot
+                    </p>
                     <div className="bg-cyan-700 px-3 py-0.5 rounded-full mt-1">
                         <p className="text-xs">Available for work</p>
                     </div>
@@ -47,9 +50,11 @@ export const Main = () => {
             <div className="hidden lg:flex flex-col gap-3 max-w-sm lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:place-self-center">
                 <h2 className="font-bold text-2xl leading-snug">Frontend & Full-Stack Developer</h2>
                 <p className="text-white/75 leading-relaxed">
-                    I build modern, responsive web apps using React.js, Next.js, and Java. With a strong
-                    focus on UI/UX and performance, I craft seamless user experiences. I also work with
-                    Node.js and Golang to develop scalable full-stack solutions.
+                    I build modern, responsive web apps using <strong className="text-white">React.js</strong> and{" "}
+                    <strong className="text-white">Next.js</strong>, with a strong focus on UI/UX and performance.
+                    On the backend I work with <strong className="text-white">Java</strong> and{" "}
+                    <strong className="text-white">Spring Boot</strong> to build scalable REST APIs, and{" "}
+                    <strong className="text-white">Node.js</strong> for lightweight full-stack solutions.
                 </p>
             </div>
 
