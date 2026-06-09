@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { getAllApps } from "../helpers/helpers";
+import { RevealWrapper } from "@/components/RevealWrapper";
 
 export default function ProjectsPage() {
     const apps = getAllApps();
@@ -18,11 +19,11 @@ export default function ProjectsPage() {
                 </Link>
                 <h1 className="section-title mb-0!">All Projects</h1>
             </div>
-            <div className="flex flex-col gap-6">
+            <RevealWrapper className="flex flex-col gap-6">
                 {apps.map((app, i) => (
                     <PortfolioAppCard app={app} key={i} />
                 ))}
-            </div>
+            </RevealWrapper>
         </main>
     );
 }
