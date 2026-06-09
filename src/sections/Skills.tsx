@@ -2,12 +2,10 @@
 import { backendIcons, frontendIcons, toolsIcons } from "@/data";
 import { SkillsStack } from "../components/SkillsStack";
 import { Container } from "@/components/Container";
-import { useReveal } from "@/hooks/useReveal";
 
 export const Skills = () => {
-    const ref = useReveal();
     return (
-        <Container id="Skills" ref={ref}>
+        <Container id="Skills">
             <h2 className="section-title">Skills</h2>
             <div className="flex flex-col gap-8 w-full">
                 <SkillsStack icons={frontendIcons} title="Frontend" />
