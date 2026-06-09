@@ -1,5 +1,5 @@
 "use client"
-import { backendIcons, frontendIcons, toolsIcons } from "@/helpers";
+import { backendIcons, frontendIcons, toolsIcons } from "@/data";
 import { SkillsStack } from "../components/SkillsStack";
 import { Container } from "@/components/Container";
 import { useReveal } from "@/hooks/useReveal";

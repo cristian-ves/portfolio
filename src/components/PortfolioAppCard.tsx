@@ -7,7 +7,7 @@ import { faLink, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import Image from "next/image";
 
-import { PortfolioAppInterface } from "@/helpers";
+import { PortfolioAppInterface } from "@/data";
 import { Badge } from "./Badge";
 
 export const PortfolioAppCard = ({ app }: { app: PortfolioAppInterface }) => {

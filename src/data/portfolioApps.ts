@@ -16,6 +16,7 @@ export interface PortfolioAppInterface {
     badges: BadgeInterface[];
     github: string | { frontend: string; backend: string };
     deploy: string;
+    featured: boolean;
 }
 
 export const portfolioApps: PortfolioAppInterface[] = [
@@ -34,6 +35,7 @@ export const portfolioApps: PortfolioAppInterface[] = [
             backend: "https://github.com/cristian-ves/paqueteria-backend", // update with real url
         },
         deploy: "https://google.com",
+        featured: true,
     },
     {
         title: "Facade painting showcase",
@@ -46,6 +48,7 @@ export const portfolioApps: PortfolioAppInterface[] = [
         ],
         github: "https://github.com/cristian-ves/manuel-freire",
         deploy: "https://google.com",
+        featured: true,
     },
     {
         title: "Typescript compiler",
@@ -57,5 +60,6 @@ export const portfolioApps: PortfolioAppInterface[] = [
         ],
         github: "https://github.com/cristian-ves/typescript-clone",
         deploy: "",
+        featured: true,
     },
 ];
