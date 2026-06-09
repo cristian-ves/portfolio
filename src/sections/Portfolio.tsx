@@ -4,10 +4,23 @@ import { PortfolioAppCard } from "@/components/PortfolioAppCard";
 import { Container } from "@/components/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 import { getFeaturedApps } from "@/app/helpers/helpers";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export const Portfolio = () => {
+
+    const router = useRouter();
+
+    useEffect(() => {
+        router.prefetch("/projects");
+    }, [router])
+
+    const handleSeeMore = () => {
+        sessionStorage.setItem("scroll:/", window.scrollY.toString());
+        router.push("/projects");
+    }
+
     return (
         <Container id="Portfolio">
             <h2 className="section-title">Portfolio</h2>
@@ -16,15 +29,13 @@ export const Portfolio = () => {
                     <PortfolioAppCard app={app} key={i} />
                 ))}
             </div>
-            <Link href='/projects'>
-                <div className="flex flex-col items-center cursor-pointer">
-                    <p className="text-sm text-white/70">See more</p>
-                    <FontAwesomeIcon
-                        icon={faAngleDown}
-                        className="fa-fw text-4xl text-white/70"
-                    />
-                </div>
-            </Link>
+            <button className="flex flex-col items-center cursor-pointer" onClick={handleSeeMore}>
+                <p className="text-sm text-white/70">See more</p>
+                <FontAwesomeIcon
+                    icon={faAngleDown}
+                    className="fa-fw text-4xl text-white/70"
+                />
+            </button>
         </Container>
     );
 };
