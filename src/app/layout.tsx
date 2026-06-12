@@ -17,7 +17,7 @@ const exo_2 = Exo_2({
 export const metadata: Metadata = {
     title: "Cristian's Portfolio",
     description:
-        "I build modern, responsive web apps using React.js, Next.js, and Java. With a strong focus on UI/UX and performance, I craft seamless user experiences. I also work with Node.js and Golang to develop scalable full-stack solutions.",
+        "I build modern, responsive web apps using React.js, Next.js, and Java/Spring Boot. With a strong focus on UI/UX, robust backend architecture, and performance, I craft seamless full-stack user experiences.",
 };
 
 export const viewport: Viewport = {

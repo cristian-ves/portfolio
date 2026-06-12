@@ -9,10 +9,10 @@ export const AboutMe = () => {
                     I{"'"}m a <strong className="text-cyan-400 font-semibold">Software Developer</strong> focused on{" "}
                     <strong className="text-cyan-400 font-semibold">frontend development</strong> with{" "}
                     <strong className="text-cyan-400 font-semibold">React.js</strong> and{" "}
-                    <strong className="text-cyan-400 font-semibold">Next.js</strong>, with backend experience in{" "}
-                    <strong className="text-cyan-400 font-semibold">Spring Boot</strong>,{" "}
-                    <strong className="text-cyan-400 font-semibold">Node.js</strong>, and{" "}
-                    <strong className="text-cyan-400 font-semibold">REST APIs</strong>. I apply clean architecture
+                    <strong className="text-cyan-400 font-semibold">Next.js</strong>, backed by solid experience engineering backends with{" "}
+                    <strong className="text-cyan-400 font-semibold">Java</strong>,{" "}
+                    <strong className="text-cyan-400 font-semibold">Spring Boot</strong>, and{" "}
+                    <strong className="text-cyan-400 font-semibold">WebSockets</strong>. I apply layered architecture
                     principles and work comfortably with <strong className="text-cyan-400 font-semibold">SQL databases</strong> across the full stack.
                 </p>
                 <p>

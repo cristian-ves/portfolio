@@ -8,9 +8,9 @@ export const Skills = () => {
         <Container id="Skills">
             <h2 className="section-title">Skills</h2>
             <div className="flex flex-col gap-8 w-full">
-                <SkillsStack icons={frontendIcons} title="Frontend" />
-                <SkillsStack icons={backendIcons} title="Backend" />
-                <SkillsStack icons={toolsIcons} title="Tools" />
+                <SkillsStack icons={frontendIcons} title="Frontend Development" />
+                <SkillsStack icons={backendIcons} title="Backend & Databases" />
+                <SkillsStack icons={toolsIcons} title="Tools & Methodologies" />
             </div>
 
             <h2 className="section-title mt-4">Soft Skills</h2>

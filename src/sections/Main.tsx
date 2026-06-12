@@ -54,9 +54,8 @@ export const Main = () => {
                 <p className="text-white/75 leading-relaxed">
                     I build modern, responsive web apps using <strong className="text-white">React.js</strong> and{" "}
                     <strong className="text-white">Next.js</strong>, with a strong focus on UI/UX and performance.
-                    On the backend I work with <strong className="text-white">Java</strong> and{" "}
-                    <strong className="text-white">Spring Boot</strong> to build scalable REST APIs, and{" "}
-                    <strong className="text-white">Node.js</strong> for lightweight full-stack solutions.
+                    On the backend, I leverage <strong className="text-white">Java</strong> and{" "}
+                    <strong className="text-white">Spring Boot</strong> to engineer robust, real-time systems using clean layered architecture.
                 </p>
             </div>
 
