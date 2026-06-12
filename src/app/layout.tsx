@@ -5,6 +5,7 @@ import "animate.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { ShootingStars } from "@/components/ShootingStars";
+import { NavigationProvider } from "@/context/NavigationContext";
 config.autoAddCss = false;
 
 const exo_2 = Exo_2({
@@ -55,9 +56,11 @@ export default function RootLayout({
                 />
 
                 {/* Main content container */}
-                <div className="relative w-full max-w-5xl mx-auto flex flex-col text-white items-center overflow-x-clip gap-16 px-4 md:px-8 pb-32">
-                    {children}
-                </div>
+                <NavigationProvider>
+                    <div className="relative w-full max-w-5xl mx-auto flex flex-col text-white items-center overflow-x-clip gap-16 px-4 md:px-8 pb-32">
+                        {children}
+                    </div>
+                </NavigationProvider>
 
                 <ShootingStars />
             </body>

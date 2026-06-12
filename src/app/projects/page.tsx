@@ -5,7 +5,7 @@ import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { getAllApps } from "../helpers/helpers";
 import { RevealWrapper } from "@/components/RevealWrapper";
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
   const apps = getAllApps();
   return (
     <main className="w-full flex flex-col gap-8">

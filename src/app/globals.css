@@ -214,3 +214,42 @@ body::before {
         transition: none;
     }
 }
+
+@keyframes progress-bar {
+    0% {
+        width: 0%;
+        opacity: 1;
+    }
+    60% {
+        width: 75%;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes progress-complete {
+    0% {
+        width: 95%;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(to right, #0e7490, #22d3ee);
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+    z-index: 100;
+    animation: progress-bar 2s ease-out forwards;
+}
+
+.progress-bar.complete {
+    animation: progress-complete 0.3s ease-out forwards;
+}

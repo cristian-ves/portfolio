@@ -22,7 +22,7 @@ export const Navbar = () => {
 
     return (
         <nav
-            className={`fixed bottom-10 py-1.5 px-4 bg-white/25 rounded-lg bg-clip-padding  backdrop-filter backdrop-blur-md border border-white/20 flex items-center justify-between gap-6  text-white transition-all duration-500 z-10 w-80 md:w-auto md:px-10
+            className={`fixed bottom-10 py-1.5 px-4 bg-indigo-100/30 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md border border-white/20 flex items-center justify-between gap-6 text-white transition-all duration-500 z-10 w-[340px] md:w-auto md:px-10
         ${isVisible ? "animate__animated animate__fadeIn visible" : "animate__animated animate__fadeOut invisible"}`}
         >
             {icons.map(({ icon, text }, i) => (

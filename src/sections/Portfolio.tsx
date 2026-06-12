@@ -6,19 +6,22 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { getFeaturedApps } from "@/app/helpers/helpers";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { useNavigation } from "@/context/NavigationContext";
 
 export const Portfolio = () => {
 
     const router = useRouter();
+    const { startLoading } = useNavigation();
 
     useEffect(() => {
         router.prefetch("/projects");
     }, [router])
 
     const handleSeeMore = () => {
+        startLoading();
         sessionStorage.setItem("scroll:/", window.scrollY.toString());
         router.push("/projects");
-    }
+    };
 
     return (
         <Container id="Portfolio">
