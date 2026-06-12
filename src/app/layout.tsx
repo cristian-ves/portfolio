@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Exo_2 } from "next/font/google";
 import "./globals.css";
 import "animate.css";
@@ -10,16 +10,18 @@ config.autoAddCss = false;
 const exo_2 = Exo_2({
     variable: "--font-exo-2",
     subsets: ["latin"],
+    display: "swap",
 });
 
 export const metadata: Metadata = {
     title: "Cristian's Portfolio",
     description:
         "I build modern, responsive web apps using React.js, Next.js, and Java. With a strong focus on UI/UX and performance, I craft seamless user experiences. I also work with Node.js and Golang to develop scalable full-stack solutions.",
-    viewport: {
-        width: "device-width",
-        initialScale: 1,
-    },
+};
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
 };
 
 export default function RootLayout({
@@ -46,8 +48,8 @@ export default function RootLayout({
                     className="fixed inset-0 pointer-events-none z-0"
                     style={{
                         background: `
-                          radial-gradient(ellipse 100% 35% at 50% 0%, rgba(6, 182, 212, 0.03) 0%, transparent 100%),
-                          radial-gradient(ellipse 60% 25% at 15% 50%, rgba(6, 182, 212, 0.015) 0%, transparent 100%)
+                            radial-gradient(ellipse 100% 35% at 50% 0%, rgba(6, 182, 212, 0.03) 0%, transparent 100%),
+                            radial-gradient(ellipse 60% 25% at 15% 50%, rgba(6, 182, 212, 0.015) 0%, transparent 100%)
                         `
                     }}
                 />
@@ -58,7 +60,6 @@ export default function RootLayout({
                 </div>
 
                 <ShootingStars />
-
             </body>
         </html>
     );

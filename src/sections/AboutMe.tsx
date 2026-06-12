@@ -6,7 +6,7 @@ export const AboutMe = () => {
             <h2 className="section-title">About me</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-white/75 leading-relaxed">
                 <p>
-                    I'm a <strong className="text-cyan-400 font-semibold">Software Developer</strong> focused on{" "}
+                    I{"'"}m a <strong className="text-cyan-400 font-semibold">Software Developer</strong> focused on{" "}
                     <strong className="text-cyan-400 font-semibold">frontend development</strong> with{" "}
                     <strong className="text-cyan-400 font-semibold">React.js</strong> and{" "}
                     <strong className="text-cyan-400 font-semibold">Next.js</strong>, with backend experience in{" "}
@@ -16,7 +16,7 @@ export const AboutMe = () => {
                     principles and work comfortably with <strong className="text-cyan-400 font-semibold">SQL databases</strong> across the full stack.
                 </p>
                 <p>
-                    I'm in my <strong className="text-cyan-400 font-semibold">4th year of Systems Engineering</strong> at
+                    I{"'"}m in my <strong className="text-cyan-400 font-semibold">4th year of Systems Engineering</strong> at
                     the <strong className="text-cyan-400 font-semibold">University of San Carlos of Guatemala</strong> and
                     have expanded my knowledge through{" "}
                     <strong className="text-cyan-400 font-semibold">Udemy</strong>,{" "}

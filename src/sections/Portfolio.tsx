@@ -1,5 +1,4 @@
 
-import { portfolioApps } from "@/data";
 import { PortfolioAppCard } from "@/components/PortfolioAppCard";
 import { Container } from "@/components/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

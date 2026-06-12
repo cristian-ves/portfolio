@@ -31,11 +31,13 @@ export const Main = () => {
                         className="object-cover rounded-lg"
                         alt="Cristian's profile picture"
                         quality={90}
+                        sizes="(max-width: 1024px) 160px, 260px"
+                        priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25" />
                 </div>
                 <div className="flex flex-col items-center gap-1">
-                    <h2 className="font-bold text-lg">Hello, I'm Cristian</h2>
+                    <h2 className="font-bold text-lg">Hello, I{"'"}m Cristian</h2>
                     <h1 className="text-white/70">Software Developer</h1>
                     <p className="text-sm text-cyan-100/50 text-center max-w-48 mb-1">
                         React · Next.js · Java · Spring Boot

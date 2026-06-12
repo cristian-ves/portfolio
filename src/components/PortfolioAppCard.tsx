@@ -118,6 +118,7 @@ export const PortfolioAppCard = ({ app }: { app: PortfolioAppInterface }) => {
                     width={300}
                     height={200}
                     className="rounded-md object-cover"
+                    style={{ width: "300px", height: "auto" }}
                 />
             </div>
 
@@ -128,7 +129,8 @@ export const PortfolioAppCard = ({ app }: { app: PortfolioAppInterface }) => {
                     alt={title}
                     width={400}
                     height={250}
-                    className="rounded-md object-cover w-full"
+                    className="rounded-md object-cover"
+                    style={{ width: "100%", height: "auto" }}
                 />
             </div>
         </div>
