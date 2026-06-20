@@ -17,6 +17,10 @@
 
     /* Section spacing */
     --section-gap: 5rem;
+
+    /* new nebula accent */
+    --nebula: #b34470;
+    --nebula-light: #d05c8c;
 }
 
 @theme inline {

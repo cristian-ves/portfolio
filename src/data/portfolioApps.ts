@@ -17,6 +17,8 @@ export interface PortfolioAppInterface {
     github: string | { frontend: string; backend: string };
     deploy: string;
     featured: boolean;
+    coldStart?: boolean;
+    video?: string;
 }
 
 export const portfolioApps: PortfolioAppInterface[] = [
@@ -32,15 +34,36 @@ export const portfolioApps: PortfolioAppInterface[] = [
         ],
         github: {
             frontend: "https://github.com/cristian-ves/paqueteria-frontend",
-            backend: "https://github.com/cristian-ves/paqueteria-backend", // update with real url
+            backend: "https://github.com/cristian-ves/paqueteria-backend",
         },
         deploy: "https://google.com",
         featured: true,
     },
     {
+        title: "Hospital Emergency System",
+        src: "hospital",
+        desc: "Real-time concurrent hospital emergency simulator built with Spring Boot and React. Features priority-based patient triage, semaphore-controlled resource pools, WebSocket live updates via STOMP/SockJS, and Redux Toolkit for reactive state management. Implements deadlock detection and resolution using Coffman conditions.",
+        badges: [
+            { icon: "springboot", text: "Spring Boot" },
+            { icon: faReact, text: "React" },
+            { icon: "typescript", text: "Typescript" },
+            { icon: "socketdotio", text: "WebSockets" },
+            { icon: "java", text: "Java" },
+            { icon: "redux", text: "Redux" },
+        ],
+        github: {
+            frontend: "https://github.com/cristian-ves/hospital-frontend",
+            backend: "https://github.com/cristian-ves/hospital-backend",
+        },
+        deploy: "https://hospital-emergency-room.netlify.app",
+        featured: true,
+        coldStart: true,
+        video: "hospital",
+    },
+    {
         title: "Facade painting showcase",
         src: "manuel-freire",
-        desc: "Website for a Madrid-based Spanish painter showcasing facade and house painting work, with a contact and quote request form.",
+        desc: "Production website built for a Madrid-based painter (Spain), showcasing facade and house painting work with a contact and quote request form. Delivered remotely as a freelance project.",
         badges: [
             { icon: "next", text: "Next" },
             { icon: faNodeJs, text: "Node" },
