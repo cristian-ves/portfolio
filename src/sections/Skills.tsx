@@ -1,7 +1,7 @@
 "use client"
 import { backendIcons, frontendIcons, toolsIcons } from "@/data";
-import { SkillsStack } from "../components/SkillsStack";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/layout/Container";
+import { SkillsStack } from "@/components/ui/SkillsStack";
 
 export const Skills = () => {
     return (

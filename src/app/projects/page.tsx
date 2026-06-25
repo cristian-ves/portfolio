@@ -1,9 +1,11 @@
-import { PortfolioAppCard } from "@/components/PortfolioAppCard";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+
+import { PortfolioAppCard } from "@/components/portfolio/PortfolioAppCard";
+import { RevealWrapper } from "@/components/layout/RevealWrapper";
+
 import { getAllApps } from "../../helpers/helpers";
-import { RevealWrapper } from "@/components/RevealWrapper";
 
 export default async function ProjectsPage() {
   const apps = getAllApps();

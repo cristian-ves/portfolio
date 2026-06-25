@@ -1,14 +1,9 @@
 "use client"
 
-import { Navbar } from "@/components/Navbar";
-import { Portfolio, Main } from "../sections";
-import { Skills } from "@/sections/Skills";
-import { AboutMe } from "@/sections/AboutMe";
-import { Contact } from "@/sections/Contact";
-import { SectionDivider } from "@/components/SectionDivider";
-import { RevealWrapper } from "@/components/RevealWrapper";
-import { ScrollRestorer } from "@/components/ScrollRestorer";
-import { BackendWarmup } from "@/components/BackendWarmup";
+import { Portfolio, Main, Skills, AboutMe, Contact } from "../sections";
+import { SectionDivider } from "@/components/ui";
+import { RevealWrapper, Navbar } from "@/components/layout";
+import { ScrollRestorer, BackendWarmup } from "@/components/system";
 
 export default function Home() {
     return (

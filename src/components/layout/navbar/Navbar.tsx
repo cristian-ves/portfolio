@@ -1,8 +1,10 @@
 "use client";
 import { faAddressCard, faCubes, faFolderOpen, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
+
+import { NavbarItem } from "./NavbarItem";
+
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useNavbarVisibility } from "@/hooks/useNavbarVisibility";
-import { NavbarItem } from "./NavbarItem";
 
 const icons = [
     { icon: faHome, text: "Home" },

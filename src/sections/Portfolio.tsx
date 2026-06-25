@@ -1,12 +1,14 @@
-
-import { PortfolioAppCard } from "@/components/PortfolioAppCard";
-import { Container } from "@/components/Container";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { getFeaturedApps } from "@/helpers/helpers";
-import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { Container } from "@/components/layout";
 import { useNavigation } from "@/context/NavigationContext";
+
+import { getFeaturedApps } from "@/helpers/helpers";
+import { PortfolioAppCard } from "@/components/portfolio/PortfolioAppCard";
 
 export const Portfolio = () => {
 

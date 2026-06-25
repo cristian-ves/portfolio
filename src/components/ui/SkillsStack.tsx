@@ -1,5 +1,5 @@
-import { Badge } from "./Badge";
 import { BadgeInterface } from "@/data";
+import { Badge } from "./Badge";
 
 export const SkillsStack = ({
     icons,

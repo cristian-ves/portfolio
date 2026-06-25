@@ -1,11 +1,14 @@
-import type { Metadata, Viewport } from "next";
-import { Exo_2 } from "next/font/google";
-import "./globals.css";
-import "animate.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { ShootingStars } from "@/components/ShootingStars";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { Exo_2 } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+
+
 import { NavigationProvider } from "@/context/NavigationContext";
+import { ShootingStars } from "@/components/system/ShootingStars";
+
+import "animate.css";
+import "./globals.css";
 config.autoAddCss = false;
 
 const exo_2 = Exo_2({

@@ -1,8 +1,9 @@
 "use client";
 import { faCopy, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { ContactButton, ContactButtonProps } from "../components/ContactButton";
-import { Container } from "@/components/Container";
+
+import { ContactButton, ContactButtonProps } from "../components/ui/ContactButton";
+import { Container } from "@/components/layout/Container";
 
 const buttons: ContactButtonProps[] = [
     {

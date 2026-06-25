@@ -1,7 +1,6 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import Image from "next/image";
-import React from "react";
 
 interface BadgeProps {
     icon: IconDefinition | string;
