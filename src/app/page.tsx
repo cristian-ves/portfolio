@@ -8,10 +8,12 @@ import { Contact } from "@/sections/Contact";
 import { SectionDivider } from "@/components/SectionDivider";
 import { RevealWrapper } from "@/components/RevealWrapper";
 import { ScrollRestorer } from "@/components/ScrollRestorer";
+import { BackendWarmup } from "@/components/BackendWarmup";
 
 export default function Home() {
     return (
         <>
+            <BackendWarmup />
             <ScrollRestorer />
             <Main />
             <Navbar />

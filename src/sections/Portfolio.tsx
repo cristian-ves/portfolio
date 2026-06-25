@@ -3,7 +3,7 @@ import { PortfolioAppCard } from "@/components/PortfolioAppCard";
 import { Container } from "@/components/Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { getFeaturedApps } from "@/app/helpers/helpers";
+import { getFeaturedApps } from "@/helpers/helpers";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useNavigation } from "@/context/NavigationContext";

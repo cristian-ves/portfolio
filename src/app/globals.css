@@ -19,8 +19,8 @@
     --section-gap: 5rem;
 
     /* new nebula accent */
-    --nebula: #b34470;
-    --nebula-light: #d05c8c;
+    --nebula: #84f9bd;
+    --nebula-light: #a8fbce;
 }
 
 @theme inline {

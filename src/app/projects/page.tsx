@@ -2,7 +2,7 @@ import { PortfolioAppCard } from "@/components/PortfolioAppCard";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { getAllApps } from "../helpers/helpers";
+import { getAllApps } from "../../helpers/helpers";
 import { RevealWrapper } from "@/components/RevealWrapper";
 
 export default async function ProjectsPage() {
