@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container } from "@/components/layout";
 import { useNavigation } from "@/context/NavigationContext";
 
-import { getFeaturedApps } from "@/helpers/helpers";
 import { PortfolioAppCard } from "@/components/portfolio/PortfolioAppCard";
+import { getFeaturedApps } from "@/data";
 
 export const Portfolio = () => {
 

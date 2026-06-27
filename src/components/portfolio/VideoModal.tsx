@@ -1,16 +1,19 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark, faVolumeXmark, faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 
 interface VideoModalProps {
     src: string;
+    isPlaying: boolean;
+    videoRef: React.RefObject<HTMLVideoElement | null>;
     onClose: () => void;
+    togglePlay: () => void;
 }
 
-export const VideoModal = ({ src, onClose }: VideoModalProps) => {
+export const VideoModal = ({ src, isPlaying, videoRef, onClose, togglePlay }: VideoModalProps) => {
     const [mounted, setMounted] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(true);
-    const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
         setMounted(true);
@@ -24,17 +27,6 @@ export const VideoModal = ({ src, onClose }: VideoModalProps) => {
             document.body.style.overflow = "";
         };
     }, [onClose]);
-
-    const togglePlay = () => {
-        if (!videoRef.current) return;
-        if (videoRef.current.paused) {
-            videoRef.current.play();
-            setIsPlaying(true);
-        } else {
-            videoRef.current.pause();
-            setIsPlaying(false);
-        }
-    };
 
     if (!mounted) return null;
 
@@ -57,9 +49,7 @@ export const VideoModal = ({ src, onClose }: VideoModalProps) => {
                     style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(4px)" }}
                     onClick={onClose}
                 >
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M1 1L13 13M13 1L1 13" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
+                    <FontAwesomeIcon icon={faXmark} className="fa-fw text-white text-sm" />
                 </button>
 
                 <div className="relative group">
@@ -78,10 +68,7 @@ export const VideoModal = ({ src, onClose }: VideoModalProps) => {
                         className="absolute top-3 left-3 flex items-center gap-1.5 px-2 py-1 rounded-full text-xs text-white/70"
                         style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(4px)" }}
                     >
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                            <path d="M11 5L6 9H2V15H6L11 19V5Z" fill="currentColor" />
-                            <path d="M16 9L20 15M20 9L16 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                        </svg>
+                        <FontAwesomeIcon icon={faVolumeXmark} className="fa-fw text-xs" />
                         <span>No audio</span>
                     </div>
 
@@ -90,16 +77,10 @@ export const VideoModal = ({ src, onClose }: VideoModalProps) => {
                         className="cursor-pointer absolute bottom-3 right-3 w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                         style={{ background: "rgba(0,0,0,0.6)", backdropFilter: "blur(4px)" }}
                     >
-                        {isPlaying ? (
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                <rect x="2" y="1" width="3" height="10" />
-                                <rect x="7" y="1" width="3" height="10" />
-                            </svg>
-                        ) : (
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="white">
-                                <path d="M2 1L10 6L2 11V1Z" />
-                            </svg>
-                        )}
+                        <FontAwesomeIcon
+                            icon={isPlaying ? faPause : faPlay}
+                            className="fa-fw text-white text-xs"
+                        />
                     </button>
                 </div>
             </div>

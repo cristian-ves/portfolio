@@ -7,7 +7,7 @@ import { GithubButton, LiveSiteButton, CardMedia, VideoModal } from './';
 
 export const PortfolioAppCard = ({ app }: { app: PortfolioAppInterface }) => {
     const { title, src, badges, desc, deploy, github, coldStart } = app;
-    const { modalOpen, openModal, closeModal } = useVideoModal();
+    const { modalOpen, isPlaying, videoRef, openModal, closeModal, togglePlay } = useVideoModal();
 
     return (
         <div className="relative flex flex-col gap-4 w-full md:flex-row md:items-center md:justify-between md:gap-8 p-5">
@@ -49,7 +49,10 @@ export const PortfolioAppCard = ({ app }: { app: PortfolioAppInterface }) => {
             {modalOpen && app.video && (
                 <VideoModal
                     src={`/portfolio/demos/${app.video}.mp4`}
+                    isPlaying={isPlaying}
+                    videoRef={videoRef}
                     onClose={closeModal}
+                    togglePlay={togglePlay}
                 />
             )}
         </div>

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { PortfolioAppCard } from "@/components/portfolio/PortfolioAppCard";
 import { RevealWrapper } from "@/components/layout/RevealWrapper";
+import { getAllApps } from "@/data";
 
-import { getAllApps } from "../../helpers/helpers";
 
 export default async function ProjectsPage() {
   const apps = getAllApps();
