@@ -1,4 +1,5 @@
 "use client";
+import { RippleButton } from "@/components/ui";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faAngleDown, faCopy, faEnvelope, faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -61,15 +62,13 @@ export const Main = () => {
 
             {/* Email + social links */}
             <div className="flex flex-col md:flex-row gap-4 lg:flex-col lg:col-start-1 lg:place-self-center">
-                <div
+                <RippleButton
                     className="glass-btn flex items-center gap-1 px-3 py-2 text-sm text-white/90 w-full"
-                    onClick={() => navigator.clipboard.writeText("alejandrovasquezesc@gmail.com")}>
+                    onClick={() => navigator.clipboard.writeText("alejandrovasquezesc@gmail.com")}
+                >
                     <span className="flex-1 truncate">alejandrovasquezesc@gmail.com</span>
-                    <FontAwesomeIcon
-                        icon={faCopy}
-                        className="fa-fw text-lg cursor-pointer shrink-0"
-                    />
-                </div>
+                    <FontAwesomeIcon icon={faCopy} className="fa-fw text-lg cursor-pointer shrink-0" />
+                </RippleButton>
                 <div className="flex items-center justify-around lg:gap-6">
                     {socialIcons.map(({ icon, href, text, download }, i) => (
                         <a
