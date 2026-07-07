@@ -23,6 +23,27 @@ export interface PortfolioAppInterface {
 
 export const portfolioApps: PortfolioAppInterface[] = [
     {
+        title: "E-Commerce Platform",
+        src: "ecommerce",
+        desc: "Full-stack e-commerce platform with four role-based dashboards: buyers can browse, filter, and purchase products with real-time cart updates; sellers list items pending moderator approval; logistics manages deliveries; and admins access employee management and sales reports. Built as a solo project with JWT auth, optimistic UI, and demo accounts for instant role switching.",
+        badges: [
+            { icon: "springboot", text: "Spring Boot" },
+            { icon: faReact, text: "React" },
+            { icon: "typescript", text: "Typescript" },
+            { icon: "postgresql", text: "PostgreSQL" },
+            { icon: "redux", text: "Redux" },
+            { icon: "java", text: "Java" },
+        ],
+        github: {
+            frontend: "https://github.com/cristian-ves/ecommerce-frontend",
+            backend: "https://github.com/cristian-ves/ecommerce-backend",
+        },
+        deploy: "https://ecommerce-cav.netlify.app",
+        featured: true,
+        coldStart: true,
+        video: "ecommerce",
+    },
+    {
         title: "Packages app",
         src: "packages",
         desc: "A web system for tracking packages, managing storage, automating logistics and calculating costs, with role-based access for administrators, operators and receptionists.",
@@ -37,7 +58,7 @@ export const portfolioApps: PortfolioAppInterface[] = [
             backend: "https://github.com/cristian-ves/paqueteria-backend",
         },
         deploy: "https://google.com",
-        featured: true,
+        featured: false,
     },
     {
         title: "Hospital Emergency System",
@@ -83,6 +104,6 @@ export const portfolioApps: PortfolioAppInterface[] = [
         ],
         github: "https://github.com/cristian-ves/typescript-clone",
         deploy: "",
-        featured: true,
+        featured: false,
     },
 ];

@@ -14,6 +14,10 @@ const PING_TARGETS: PingTarget[] = [
         name: "hospital-backend",
         url: "https://hospital-backend-aehn.onrender.com/api/resources",
     },
+    {
+        name: "ecommerce-backend",
+        url: "https://ecommerce-backend-f4f3.onrender.com/api/auth/ping",
+    },
 ];
 
 const pingTarget = async ({ name, url }: PingTarget): Promise<void> => {
