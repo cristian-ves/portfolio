@@ -37,7 +37,7 @@ export const VideoModal = ({ src, isPlaying, videoRef, onClose, togglePlay }: Vi
             onClick={onClose}
         >
             <div
-                className="relative max-w-2xl w-full rounded-xl overflow-hidden animate__animated animate__zoomIn animate__faster"
+                className="relative max-w-4xl w-full rounded-xl overflow-hidden animate__animated animate__zoomIn animate__faster"
                 style={{
                     border: "1px solid rgba(179, 68, 112, 0.3)",
                     boxShadow: "0 0 60px rgba(179, 68, 112, 0.15), 0 20px 50px rgba(0,0,0,0.5)",
