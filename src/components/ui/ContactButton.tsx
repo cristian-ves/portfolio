@@ -31,7 +31,6 @@ export const ContactButton = ({ onClick, icon, text, href, download }: ContactBu
         <RippleButton
             className="glass-btn flex items-center justify-center gap-2 py-2.5 px-4 w-full font-medium text-white"
             onClick={onClick}
-            variant="void"
         >
             <FontAwesomeIcon icon={icon} className="fa-fw text-xl" />
             <span>{text}</span>
